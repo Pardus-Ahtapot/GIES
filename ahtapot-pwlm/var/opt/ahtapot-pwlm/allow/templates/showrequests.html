@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}
+<title>İzin İstekleri</title>
+{% endblock %}
+{% block content %}
+    {% if message %}
+    <b>Mesaj : </b>{{message}}
+    {% endif %}
+    <table border="1" align="center" class="dmrTable">
+    <tr>
+        <td align="center">
+            <b>BAĞLANTI</b>
+        </td>
+        <td align="center">
+            <b>&nbspKULLANICI&nbsp</b>
+        </td>
+        <td align="right">
+            <b>IP&nbsp</b>
+        </td>
+        <td>
+            <b>İşlemler</b>
+        </td>
+    </tr>
+    {% for req in requests %}
+
+        <tr>
+        <form method="POST" action="/request/confirm/ ">
+            {% csrf_token %}
+            <input type="hidden" name="requestId" id="requestId" value="{{req.id}}" />
+                    <td align="center">
+                        {{req.url}}
+                    </td>
+                    <td align="center">
+                        {{req.user}}
+                    </td>
+                    <td align="right">
+                        {{req.ip}}
+                    </td>
+                    <td align="right">
+                        &nbsp<input type="submit" value="EKLE" class="btn btn-success"/>
+                        &nbsp<a href="/request/reject/{{req.id}}"><input type="button" value="REDDET" class="btn btn-warning" /></td>
+                    </td>
+        </form>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

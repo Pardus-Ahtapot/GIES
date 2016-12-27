@@ -1,0 +1,6 @@
+AHTAPOT-PWLM v1.0.1
+
+- Kullanicinin karsisina cikan engelli internet sayfasindan izin isteyebilmesi saglandi.
+- Istenen izinleri listeleyen ve beyazlisteye ekleyen fonksiyonilite saglandi.
+- Yeni bir izin istendiginde mail ile bilgilendirme saglandi.
+- Islemlerin verimli sekilde loglanmasi saglandi.

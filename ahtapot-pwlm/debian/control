@@ -1,0 +1,12 @@
+Source: ahtapot-pwlm
+Section: base
+Priority: optional
+Maintainer: Volkan DELIOGLU <volkan.delioglu@pardus.org.tr>, Ugur CIL <ugur.cil@pardus.org.tr>    
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+Homepage: https://github.com/Pardus-Ahtapot/GIES/tree/master/ahtapot-pwlm
+
+Package: ahtapot-pwlm
+Architecture: all
+Depends: python (>= 2.7), python (<< 2.8)
+Description: Ahtapot Proxy White List Manager

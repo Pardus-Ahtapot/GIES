@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}
+<title> Yapılandırma Ayarları </title>
+{% endblock %}
+{% block content %}
+<form method="POST" action="/request/setconfig/">
+    {% csrf_token %}
+    <table class="dmrTable">
+        <tr>
+            <td>
+                Özellik
+            </td>
+            <td>
+                Değer
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Beyaz Liste Repo Yolu
+            </td>
+            <td>
+                <input type="text" name="repoPath" id="repoPath" value="{{repo_path}}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Beyaz Liste Dosya Yolu
+            </td>
+            <td>
+                <input type="text" name="whitelistFile" id="whitelistFile" value="{{whitelist_file}}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Ana Dal
+            </td>
+            <td>
+                <input type="text" name="masterBranch" id="masterBranch" value="{{master_branch}}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Onay Dalı
+            </td>
+            <td>
+                <input type="text" name="confirmBranch" id="confirmBranch" value="{{confirm_branch}}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Email Alıcı
+            </td>
+            <td>
+                <input type="text" name="receiverMail" id="receiverMail" value="{{receiver_mail}}"/>
+            </td>
+        </tr>
+        <tr>
+            <td></td><td><input type="submit" value="KAYDET" class="btn btn-success"/></td>
+        </tr>
+    </table>
+
+</form>
+{% endblock %}

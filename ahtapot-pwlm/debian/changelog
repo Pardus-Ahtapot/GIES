@@ -1,0 +1,11 @@
+ahtapot-pwlm (1.0.2) unstable; urgency=low
+
+  * Initial release (Closes: #1)  <0 is the predecessor version number>
+    AHTAPOT-PWLM v1.0.2
+    Man sayfasi eklendi.
+    AHTAPOT-PWLM v1.0.1
+    Kullanicinin karsisina cikan engelli internet sayfasindan izin isteyebilmesi saglandi.
+    Istenen izinleri listeleyen ve beyazlisteye ekleyen fonksiyonilite saglandi.
+    Yeni bir izin istendiginde mail ile bilgilendirme saglandi.
+    Islemlerin verimli sekilde loglanmasi saglandi.
+
